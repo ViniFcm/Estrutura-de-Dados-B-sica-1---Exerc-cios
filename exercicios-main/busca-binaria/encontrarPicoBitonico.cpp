@@ -18,6 +18,27 @@
  * @return O índice do ponto de pico.
  */
 int encontrarPicoBitonico(const int arr[], int tamanho) {
+    int inicio = 0;
+    int fim = tamanho - 1;
+    while (inicio <= fim)
+    {
+        int meio = inicio+(fim-inicio)/2;
+        if(arr[meio] > arr[meio -1] && meio == tamanho - 1){
+            return meio;
+        }
+        else if(arr[meio] > arr[meio +1] && meio == 0){
+            return meio;
+        }
+        else if(arr[meio] > arr[meio-1] && arr[meio] < arr[meio+1]){
+            inicio = meio +1;
+        }
+        else if(arr[meio] < arr[meio-1] && arr[meio] > arr[meio+1]){
+            fim = meio - 1;
+        }
+        else if(arr[meio] > arr[meio + 1] && arr[meio] > arr[meio-1]){
+            return meio;
+        }
+    }
     return -1;
 }
 
