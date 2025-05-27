@@ -36,7 +36,16 @@ Lista::~Lista()
  */
 bool Lista::inserirInicio(const std::string& elemento)
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    if(this->primeiro == NULL){
+        No* novo = new No(elemento);
+        this->primeiro = novo;
+        this->ultimo = novo;
+        this->quantidade++;
+    }
+    No* novo = new No(elemento);
+    novo->proximo = this->primeiro;
+    this->primeiro = novo;
+    
 }
 
 /**
