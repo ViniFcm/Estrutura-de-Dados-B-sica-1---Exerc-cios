@@ -36,16 +36,18 @@ Lista::~Lista()
  */
 bool Lista::inserirInicio(const std::string& elemento)
 {
-    if(this->primeiro == NULL){
+    if(this->primeiro == nullptr){
         No* novo = new No(elemento);
         this->primeiro = novo;
         this->ultimo = novo;
         this->quantidade++;
+        return true;
     }
     No* novo = new No(elemento);
     novo->proximo = this->primeiro;
     this->primeiro = novo;
-    
+    this->quantidade++;
+    return true;
 }
 
 /**
@@ -56,7 +58,14 @@ bool Lista::inserirInicio(const std::string& elemento)
  */
 bool Lista::inserirFim(const std::string& elemento)
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    if(this->primeiro == nullptr){
+        return inserirInicio(elemento);
+    }
+    No* novo = new No(elemento);
+    this->ultimo->proximo = novo;
+    this->ultimo = novo;
+    this->quantidade++;
+
 }
 
 /**
@@ -80,7 +89,15 @@ bool Lista::inserirNaPosicao(int i, const std::string& elemento)
  */
 bool Lista::removerInicio()
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    if(this->primeiro == nullptr){
+        return false;
+    }
+    auto aux = this->primeiro;
+    this->primeiro = this->primeiro->proximo;
+    delete aux;
+    this->quantidade--;
+    return true;
+
 }
 
 /**
@@ -91,7 +108,23 @@ bool Lista::removerInicio()
  */
 bool Lista::removerFim()
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    if(this->ultimo == nullptr){
+        return false;
+    }
+    if(this->ultimo == this->primeiro){
+        return removerInicio();
+    }
+    auto aux1 = this->ultimo;
+    auto aux = this->primeiro;
+    while(aux->proximo != this->ultimo){
+        aux = aux->proximo;
+    }
+    aux->proximo = nullptr;
+    this->ultimo = aux;
+    this->quantidade--;
+    delete aux1;
+    return true;
+
 }
 
 /**
