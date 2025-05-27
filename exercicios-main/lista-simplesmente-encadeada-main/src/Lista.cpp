@@ -78,7 +78,18 @@ bool Lista::inserirFim(const std::string& elemento)
  */
 bool Lista::inserirNaPosicao(int i, const std::string& elemento) 
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    No* novo = new No(elemento);
+    auto aux = this->primeiro;
+    int j=1;
+    while(j<i){
+        aux = aux->proximo;
+        j++;
+    }
+    auto aux1 = aux->proximo;
+    aux->proximo = novo;
+    novo->proximo = aux1;
+    this->quantidade++;
+    return true;
 }
 
 /**
