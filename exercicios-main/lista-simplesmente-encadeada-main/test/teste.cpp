@@ -171,8 +171,8 @@ TEST_CASE("Remoção na i-ésima posição") {
 
     CHECK(lista.removerNaPosicao(2) == true); // remove "C", permanece P
     CHECK(lista.tamanho() == 1);
-    CHECK(lista.primeiroElemento() == "C");
-    CHECK(lista.ultimoElemento() == "C");
+    CHECK(lista.primeiroElemento() == "P");
+    CHECK(lista.ultimoElemento() == "P");
 
     CHECK(lista.removerNaPosicao(1) == true); // remove "C", permanece P
     CHECK(lista.tamanho() == 0);

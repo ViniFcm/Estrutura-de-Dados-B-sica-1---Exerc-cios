@@ -65,6 +65,7 @@ bool Lista::inserirFim(const std::string& elemento)
     this->ultimo->proximo = novo;
     this->ultimo = novo;
     this->quantidade++;
+    return true;
 
 }
 
@@ -78,18 +79,32 @@ bool Lista::inserirFim(const std::string& elemento)
  */
 bool Lista::inserirNaPosicao(int i, const std::string& elemento) 
 {
+    if(i < 1 or i > this->quantidade + 1){
+         throw std::out_of_range("Posição Inválida");
+    }
+    if(i == 1){
+        return inserirInicio(elemento);
+    }
+    if(i == this->quantidade + 1){
+        return inserirFim(elemento);
+    }
+    
     No* novo = new No(elemento);
-    auto aux = this->primeiro;
+    auto atual = this->primeiro;
+    auto anterior = this->primeiro;
     int j=1;
     while(j<i){
-        aux = aux->proximo;
+        anterior = atual;
+        atual = atual->proximo;
         j++;
     }
-    auto aux1 = aux->proximo;
-    aux->proximo = novo;
-    novo->proximo = aux1;
+    //Posicionar Nó
+    anterior->proximo = novo;
+    novo->proximo = atual;
+    //quuantidade
     this->quantidade++;
     return true;
+    
 }
 
 /**
@@ -101,7 +116,7 @@ bool Lista::inserirNaPosicao(int i, const std::string& elemento)
 bool Lista::removerInicio()
 {
     if(this->primeiro == nullptr){
-        return false;
+        throw std::out_of_range("!!");
     }
     auto aux = this->primeiro;
     this->primeiro = this->primeiro->proximo;
@@ -120,7 +135,7 @@ bool Lista::removerInicio()
 bool Lista::removerFim()
 {
     if(this->ultimo == nullptr){
-        return false;
+        throw std::out_of_range("!!");
     }
     if(this->ultimo == this->primeiro){
         return removerInicio();
@@ -147,7 +162,29 @@ bool Lista::removerFim()
  */
 bool Lista::removerNaPosicao(int i) 
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    if(i < 1 or i > this->quantidade ){
+         throw std::out_of_range("Posição Inválida");
+    }
+    if(i == 1){
+        return removerInicio();
+    }
+    if(i == this->quantidade ){
+        return removerFim();
+    }
+    auto atual = this->primeiro;
+    auto anterior = this->primeiro;
+    int j=1;
+    while(j<i){
+        anterior = atual;
+        atual = atual->proximo;
+        j++;
+    }
+    //remover Nó
+    anterior->proximo = atual->proximo;
+    delete atual;
+    //quuantidade
+    this->quantidade--;
+    return true;
 }
 
 /**
@@ -195,7 +232,22 @@ const std::string& Lista::ultimoElemento() const
  */
 const std::string& Lista::elementoNaPosicao(int i) const 
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    if(i < 1 or i > this->quantidade ){
+         throw std::out_of_range("Posição Inválida");
+    }
+    if(i == 1){
+        return this->primeiro->valor;
+    }
+    if(i == this->quantidade ){
+        return this->ultimo->valor;
+    }
+    auto atual = this->primeiro;
+    int j=1;
+    while(j<i){
+        atual = atual->proximo;
+        j++;
+    }
+    return atual->valor;
 }
 
 /**
