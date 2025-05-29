@@ -5,7 +5,7 @@
 //
 
 #include "ListaDuplamenteEncadeada.h"
-
+ 
 ListaDuplamenteEncadeada::ListaDuplamenteEncadeada()
 {
     this->cabeca = new No<std::string>("CABECA_NAO_DEVE_SER_ACESSADA");
@@ -69,12 +69,32 @@ int ListaDuplamenteEncadeada::buscar(std::string s)
 
 bool ListaDuplamenteEncadeada::inserirInicio(std::string s)
 {   
-    return false;
+    auto novo = new No<std::string>(s);
+	//posiciona o Nó
+	novo->anterior=this->cabeca;
+	novo->proximo=this->cabeca->proximo;
+	//Atualizar vizinhos
+	this->cabeca->proximo->anterior = novo;
+	this->cabeca->proximo = novo;
+	//Quantidade;
+	this->quantidade++;
+	return true;
+
+	
 }
 
 bool ListaDuplamenteEncadeada::inserirFim(std::string s)
 {    
-    return true;
+    auto novo = new No<std::string>(s);
+	//posiciona o Nó
+	novo->anterior=this->cauda->anterior;
+	novo->proximo=this->cauda;
+	//Atualizar vizinhos
+	this->cauda->anterior->proximo = novo;
+	this->cauda->anterior = novo;
+	//Quantidade;
+	this->quantidade++;
+	return true;
 }
 
 bool ListaDuplamenteEncadeada::inserir(int i, std::string s)
