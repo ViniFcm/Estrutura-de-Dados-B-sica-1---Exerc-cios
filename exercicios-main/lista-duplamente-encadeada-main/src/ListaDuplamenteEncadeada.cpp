@@ -75,15 +75,12 @@ int ListaDuplamenteEncadeada::buscar(std::string s)
 	
 	int j = 1;
 	auto aux = this->cabeca->proximo;
-	do{
+	for(int j = 1; j <= this->quantidade; j++){
 		if(aux->valor == s){
 			return j;
 		}
-		
 		aux = aux->proximo;
-		j++;
-		
-	}while(aux->valor != s and j <= this->quantidade);
+	}
 
     return -1;
 	
