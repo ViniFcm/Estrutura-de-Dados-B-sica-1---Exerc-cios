@@ -44,7 +44,7 @@ $(BIN_DIR)/%.o: $(TEST_DIR)/%.cpp
 test: $(TEST_EXECUTABLE)
 
 run-test: $(TEST_EXECUTABLE)
-	./$(TEST_EXECUTABLE) $(ARGS)
+	./$(TEST_EXECUTABLE) $(ARGS) -s
 
 run: $(EXECUTABLE)
 	./$(EXECUTABLE)
