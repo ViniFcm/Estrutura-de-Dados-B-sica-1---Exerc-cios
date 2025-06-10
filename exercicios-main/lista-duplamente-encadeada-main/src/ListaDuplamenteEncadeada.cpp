@@ -5,7 +5,7 @@
 //
 
 #include "ListaDuplamenteEncadeada.h"
-
+ 
 ListaDuplamenteEncadeada::ListaDuplamenteEncadeada()
 {
     this->cabeca = new No<std::string>("CABECA_NAO_DEVE_SER_ACESSADA");
@@ -59,37 +59,115 @@ bool ListaDuplamenteEncadeada::vazia(void)
 
 const std::string ListaDuplamenteEncadeada::elementoNaPosicao(int i) const
 {
-   return "";
+	
+	int j =1;
+	auto aux = this->cabeca->proximo;
+	while(j < i){
+		aux = aux->proximo;
+		j++;
+	}
+
+    return aux->valor;
 }
 
 int ListaDuplamenteEncadeada::buscar(std::string s)
-{
-	return -1;
+{	
+	
+	int j = 1;
+	auto aux = this->cabeca->proximo;
+	for(int j = 1; j <= this->quantidade; j++){
+		if(aux->valor == s){
+			return j;
+		}
+		aux = aux->proximo;
+	}
+
+    return -1;
+	
 }
 
 bool ListaDuplamenteEncadeada::inserirInicio(std::string s)
 {   
-    return false;
+    auto novo = new No<std::string>(s);
+	//posiciona o Nó
+	novo->anterior=this->cabeca;
+	novo->proximo=this->cabeca->proximo;
+	//Atualizar vizinhos
+	this->cabeca->proximo->anterior = novo;
+	this->cabeca->proximo = novo;
+	//Quantidade;
+	this->quantidade++;
+	return true;
+
+	
 }
 
 bool ListaDuplamenteEncadeada::inserirFim(std::string s)
 {    
-    return true;
+    auto novo = new No<std::string>(s);
+	//posiciona o Nó
+	novo->anterior=this->cauda->anterior;
+	novo->proximo=this->cauda;
+	//Atualizar vizinhos
+	this->cauda->anterior->proximo = novo;
+	this->cauda->anterior = novo;
+	//Quantidade;
+	this->quantidade++;
+	return true;
 }
 
 bool ListaDuplamenteEncadeada::inserir(int i, std::string s)
-{    
+{   
+	if(i <0 or i > this->quantidade+1){
+		return false;
+	}
+	if(i == 1){
+		return inserirInicio(s);
+	}
+	if(i == this->quantidade+1){
+		return inserirFim(s);
+	}
+	auto novo = new No<std::string>(s);
+	int j =1;
+	auto aux = this->cabeca->proximo;
+	while(j < i){
+		aux = aux->proximo;
+		j++;
+	}
+	novo->proximo = aux;
+	novo->anterior= aux->anterior;
+
+	aux->anterior->proximo = novo;
+	aux->anterior = novo;
+
+	this->quantidade++;
+
+
     return true;
 }
 
 std::string ListaDuplamenteEncadeada::removerInicio(void)
 {   
-    return "";
+    auto aux = this->cabeca->proximo;
+	//Desconectar Nó
+	aux->proximo->anterior = aux->anterior;
+	aux->anterior->proximo = aux->proximo;
+	auto resultado = aux->valor;
+	delete aux;
+	this->quantidade--;
+	return resultado;
 }
 
 std::string ListaDuplamenteEncadeada::removerFim(void)
 {    
-    return "";
+    auto aux = this->cauda->anterior;
+	//Desconectar Nó
+	aux->proximo->anterior = aux->anterior;
+	aux->anterior->proximo = aux->proximo;
+	auto resultado = aux->valor;
+	delete aux;
+	this->quantidade--;
+	return resultado;
 }
 
 std::string ListaDuplamenteEncadeada::remover(int i)

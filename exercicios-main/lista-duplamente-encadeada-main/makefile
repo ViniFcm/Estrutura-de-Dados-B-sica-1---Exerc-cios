@@ -44,10 +44,10 @@ $(BIN_DIR)/%.o: $(TEST_DIR)/%.cpp
 test: $(TEST_EXECUTABLE)
 
 run-test: $(TEST_EXECUTABLE)
-	./$(TEST_EXECUTABLE) 
+	./$(TEST_EXECUTABLE) -s
 
-run: $(EXECUTABLE)
-	./$(EXECUTABLE)
+run: $(EXECUTABLE)	
+	./$(EXECUTABLE) 
 
 clean:
 	rm -f $(BIN_DIR)/*.o $(EXECUTABLE) $(TEST_EXECUTABLE)

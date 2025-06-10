@@ -2,7 +2,7 @@
 //  ListaDuplamenteEncadeada.h
 //
 //  Criado por Eiji Adachi Medeiros Barbosa
-//
+// 
 
 #ifndef __ListaDuplamenteEncadeada__
 #define __ListaDuplamenteEncadeada__
