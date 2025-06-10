@@ -8,7 +8,7 @@ TEST_CASE("Fila - Tamanho inicial deve ser zero") {
     CHECK(fila.tamanho() == 0);
     CHECK(fila.vazia());
     CHECK_FALSE(fila.cheia());
-}
+} 
 
 TEST_CASE("Fila - Enfileirar elementos até a capacidade máxima") {
     Fila<int> fila(3);

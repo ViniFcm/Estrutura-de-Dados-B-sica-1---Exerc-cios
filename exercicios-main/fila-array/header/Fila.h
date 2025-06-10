@@ -12,7 +12,7 @@
 template <typename T>
 class Fila
 {
-private:
+private: 
     T* elementos;
     int capacidade;
     int quantidade;
@@ -22,10 +22,16 @@ private:
 public:
     Fila(int cap)
     {
+        this->capacidade = cap;
+        this->quantidade = 0;
+        this->inicio = 0;
+        this->fim = 0;
+        elementos = new T[this->capacidade];
     }
     
     ~Fila()
     {
+        delete [] elementos;
     }
     
     int tamanho()
@@ -35,14 +41,33 @@ public:
 
     T frente()
     {
+        if(this->vazia() == true){
+        throw std::underflow_error("Vazia");
+        return this->elementos[inicio];
+        }
+        return this->elementos[inicio];
     }
 
     void enfileirar(T elemento)
     {
+        if(this->cheia() == true){
+            return throw std::overflow_error("Cheia");
+        }
+        this->elementos[fim] = elemento;
+        this->quantidade++;
+        this->fim = (fim + 1)%capacidade;
     }
 
     T desenfileirar()
     {
+        if(this->vazia() == true){
+            throw std::underflow_error("Vazia");
+            return this->elementos[inicio];
+        }
+        this->quantidade--;
+        auto saiu = this->elementos[inicio];
+        this->inicio = (inicio + 1)%capacidade;
+        return saiu;
     }
 
     bool cheia()
