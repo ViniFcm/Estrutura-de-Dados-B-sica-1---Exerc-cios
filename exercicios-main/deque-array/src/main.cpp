@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Deque.h"
+#include "header/Deque.h"
 
 void exibir_menu()
 {
@@ -81,7 +81,7 @@ int main()
         case 5:
             try
             {
-                std::cout << "Elemento na frente: " << deque.frente() << std::endl;
+                std::cout << "Elemento na frente: " << deque.daFrente() << std::endl;
             }
             catch (const std::underflow_error &e)
             {
@@ -92,7 +92,7 @@ int main()
         case 6:
             try
             {
-                std::cout << "Elemento de trás: " << deque.atras() << std::endl;
+                std::cout << "Elemento de trás: " << deque.deTras() << std::endl;
             }
             catch (const std::underflow_error &e)
             {

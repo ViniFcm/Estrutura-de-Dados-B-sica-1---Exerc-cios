@@ -1,7 +1,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include "Deque.h"
-#include <string>
+#include <string> 
 
 TEST_CASE("Deque - Tamanho inicial deve ser zero") {
     Deque<int> deque(5);
