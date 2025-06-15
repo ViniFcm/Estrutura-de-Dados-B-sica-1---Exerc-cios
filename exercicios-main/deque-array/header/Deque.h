@@ -10,6 +10,7 @@
 #include <string>
 #include <sstream>
 #include <stdexcept>
+#include <iostream>
 
 template <typename T>
 class Deque
@@ -110,7 +111,9 @@ public:
             throw std::underflow_error("VAZIA");
             
         }
-        return this->elementos[this->atras-1];
+        auto posicao = atras-1;
+        std::cout << posicao <<std::endl;
+        return this->elementos[posicao];
     }
 
     std::string imprimir() const
