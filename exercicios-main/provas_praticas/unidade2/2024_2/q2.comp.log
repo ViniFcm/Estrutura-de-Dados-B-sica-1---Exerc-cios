@@ -1,0 +1,420 @@
+mingw32-make[1]: Entering directory 'C:/Users/Vinícius de Freitas/Desktop/Folders_ Pastas/UFRN/EDB 1/Exercícios_1unidade/exercicios-main/provas_praticas/unidade2/2024_2/q2'
+g++ -Wall -Wextra  -pedantic -std=c++14 -Iheader -I../lib -g -c src/ListaEncadeada.cpp -o src/ListaEncadeada.o
+src/ListaEncadeada.cpp: In member function 'int ListaEncadeada::removerTodos(int)':
+src/ListaEncadeada.cpp:25:38: warning: unused parameter 'val' [-Wunused-parameter]
+ int ListaEncadeada::removerTodos(int val)
+                                      ^~~
+g++ -Wall -Wextra  -pedantic -std=c++14 -Iheader -I../lib -g -c test/teste.cpp -o test/teste.o
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h: In function 'void doctest::{anonymous}::color_to_stream(std::ostream&, doctest::Color::Enum)':
+../lib/doctest.h:4425:35: error: '_fileno' was not declared in this scope
+            (_isatty(_fileno(stdout)) == false && getContextOptions()->force_colors == false))
+                                   ^
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h: At global scope:
+../lib/doctest.h:3173:42: error: 'mutex' in namespace 'std' does not name a type
+ #define DOCTEST_DECLARE_MUTEX(name) std::mutex name;
+                                          ^
+../lib/doctest.h:5418:9: note: in expansion of macro 'DOCTEST_DECLARE_MUTEX'
+         DOCTEST_DECLARE_MUTEX(mutex)
+         ^~~~~~~~~~~~~~~~~~~~~
+../lib/doctest.h: In member function 'virtual void doctest::{anonymous}::XmlReporter::test_case_exception(const doctest::TestCaseException&)':
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:5580:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:5580:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:60: error: template argument 1 is invalid
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                            ^
+../lib/doctest.h:5580:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:5580:32: error: 'mutex' was not declared in this scope
+             DOCTEST_LOCK_MUTEX(mutex)
+                                ^
+../lib/doctest.h:3175:100: note: in definition of macro 'DOCTEST_LOCK_MUTEX'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                                    ^~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h:3175:80: warning: unused variable 'DOCTEST_ANON_LOCK_2' [-Wunused-variable]
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                ^
+../lib/doctest.h:419:34: note: in definition of macro 'DOCTEST_CAT_IMPL'
+ #define DOCTEST_CAT_IMPL(s1, s2) s1##s2
+                                  ^~
+../lib/doctest.h:422:30: note: in expansion of macro 'DOCTEST_CAT'
+ #define DOCTEST_ANONYMOUS(x) DOCTEST_CAT(x, __COUNTER__)
+                              ^~~~~~~~~~~
+../lib/doctest.h:3175:62: note: in expansion of macro 'DOCTEST_ANONYMOUS'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                              ^~~~~~~~~~~~~~~~~
+../lib/doctest.h:5580:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h: In member function 'virtual void doctest::{anonymous}::XmlReporter::log_assert(const doctest::AssertData&)':
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:5601:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:5601:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:60: error: template argument 1 is invalid
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                            ^
+../lib/doctest.h:5601:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:5601:32: error: 'mutex' was not declared in this scope
+             DOCTEST_LOCK_MUTEX(mutex)
+                                ^
+../lib/doctest.h:3175:100: note: in definition of macro 'DOCTEST_LOCK_MUTEX'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                                    ^~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h:3175:80: warning: unused variable 'DOCTEST_ANON_LOCK_3' [-Wunused-variable]
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                ^
+../lib/doctest.h:419:34: note: in definition of macro 'DOCTEST_CAT_IMPL'
+ #define DOCTEST_CAT_IMPL(s1, s2) s1##s2
+                                  ^~
+../lib/doctest.h:422:30: note: in expansion of macro 'DOCTEST_CAT'
+ #define DOCTEST_ANONYMOUS(x) DOCTEST_CAT(x, __COUNTER__)
+                              ^~~~~~~~~~~
+../lib/doctest.h:3175:62: note: in expansion of macro 'DOCTEST_ANONYMOUS'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                              ^~~~~~~~~~~~~~~~~
+../lib/doctest.h:5601:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h: In member function 'virtual void doctest::{anonymous}::XmlReporter::log_message(const doctest::MessageData&)':
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:5627:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:5627:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:60: error: template argument 1 is invalid
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                            ^
+../lib/doctest.h:5627:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:5627:32: error: 'mutex' was not declared in this scope
+             DOCTEST_LOCK_MUTEX(mutex)
+                                ^
+../lib/doctest.h:3175:100: note: in definition of macro 'DOCTEST_LOCK_MUTEX'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                                    ^~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h:3175:80: warning: unused variable 'DOCTEST_ANON_LOCK_4' [-Wunused-variable]
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                ^
+../lib/doctest.h:419:34: note: in definition of macro 'DOCTEST_CAT_IMPL'
+ #define DOCTEST_CAT_IMPL(s1, s2) s1##s2
+                                  ^~
+../lib/doctest.h:422:30: note: in expansion of macro 'DOCTEST_CAT'
+ #define DOCTEST_ANONYMOUS(x) DOCTEST_CAT(x, __COUNTER__)
+                              ^~~~~~~~~~~
+../lib/doctest.h:3175:62: note: in expansion of macro 'DOCTEST_ANONYMOUS'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                              ^~~~~~~~~~~~~~~~~
+../lib/doctest.h:5627:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h: At global scope:
+../lib/doctest.h:3173:42: error: 'mutex' in namespace 'std' does not name a type
+ #define DOCTEST_DECLARE_MUTEX(name) std::mutex name;
+                                          ^
+../lib/doctest.h:5712:9: note: in expansion of macro 'DOCTEST_DECLARE_MUTEX'
+         DOCTEST_DECLARE_MUTEX(mutex)
+         ^~~~~~~~~~~~~~~~~~~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h: In static member function 'static std::__cxx11::string doctest::{anonymous}::JUnitReporter::JUnitTestCaseData::getCurrentTimestamp()':
+../lib/doctest.h:5727:45: error: 'gmtime_s' was not declared in this scope
+                 gmtime_s(&timeInfo, &rawtime);
+                                             ^
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h: In member function 'virtual void doctest::{anonymous}::JUnitReporter::test_case_exception(const doctest::TestCaseException&)':
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:5884:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:5884:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:60: error: template argument 1 is invalid
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                            ^
+../lib/doctest.h:5884:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:5884:32: error: 'mutex' was not declared in this scope
+             DOCTEST_LOCK_MUTEX(mutex)
+                                ^
+../lib/doctest.h:3175:100: note: in definition of macro 'DOCTEST_LOCK_MUTEX'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                                    ^~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h:3175:80: warning: unused variable 'DOCTEST_ANON_LOCK_6' [-Wunused-variable]
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                ^
+../lib/doctest.h:419:34: note: in definition of macro 'DOCTEST_CAT_IMPL'
+ #define DOCTEST_CAT_IMPL(s1, s2) s1##s2
+                                  ^~
+../lib/doctest.h:422:30: note: in expansion of macro 'DOCTEST_CAT'
+ #define DOCTEST_ANONYMOUS(x) DOCTEST_CAT(x, __COUNTER__)
+                              ^~~~~~~~~~~
+../lib/doctest.h:3175:62: note: in expansion of macro 'DOCTEST_ANONYMOUS'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                              ^~~~~~~~~~~~~~~~~
+../lib/doctest.h:5884:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h: In member function 'virtual void doctest::{anonymous}::JUnitReporter::log_assert(const doctest::AssertData&)':
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:5898:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:5898:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:60: error: template argument 1 is invalid
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                            ^
+../lib/doctest.h:5898:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:5898:32: error: 'mutex' was not declared in this scope
+             DOCTEST_LOCK_MUTEX(mutex)
+                                ^
+../lib/doctest.h:3175:100: note: in definition of macro 'DOCTEST_LOCK_MUTEX'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                                    ^~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h:3175:80: warning: unused variable 'DOCTEST_ANON_LOCK_7' [-Wunused-variable]
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                ^
+../lib/doctest.h:419:34: note: in definition of macro 'DOCTEST_CAT_IMPL'
+ #define DOCTEST_CAT_IMPL(s1, s2) s1##s2
+                                  ^~
+../lib/doctest.h:422:30: note: in expansion of macro 'DOCTEST_CAT'
+ #define DOCTEST_ANONYMOUS(x) DOCTEST_CAT(x, __COUNTER__)
+                              ^~~~~~~~~~~
+../lib/doctest.h:3175:62: note: in expansion of macro 'DOCTEST_ANONYMOUS'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                              ^~~~~~~~~~~~~~~~~
+../lib/doctest.h:5898:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h: In member function 'virtual void doctest::{anonymous}::JUnitReporter::log_message(const doctest::MessageData&)':
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:5913:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:5913:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:60: error: template argument 1 is invalid
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                            ^
+../lib/doctest.h:5913:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:5913:32: error: 'mutex' was not declared in this scope
+             DOCTEST_LOCK_MUTEX(mutex)
+                                ^
+../lib/doctest.h:3175:100: note: in definition of macro 'DOCTEST_LOCK_MUTEX'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                                    ^~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h:3175:80: warning: unused variable 'DOCTEST_ANON_LOCK_8' [-Wunused-variable]
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                ^
+../lib/doctest.h:419:34: note: in definition of macro 'DOCTEST_CAT_IMPL'
+ #define DOCTEST_CAT_IMPL(s1, s2) s1##s2
+                                  ^~
+../lib/doctest.h:422:30: note: in expansion of macro 'DOCTEST_CAT'
+ #define DOCTEST_ANONYMOUS(x) DOCTEST_CAT(x, __COUNTER__)
+                              ^~~~~~~~~~~
+../lib/doctest.h:3175:62: note: in expansion of macro 'DOCTEST_ANONYMOUS'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                              ^~~~~~~~~~~~~~~~~
+../lib/doctest.h:5913:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h: At global scope:
+../lib/doctest.h:3173:42: error: 'mutex' in namespace 'std' does not name a type
+ #define DOCTEST_DECLARE_MUTEX(name) std::mutex name;
+                                          ^
+../lib/doctest.h:5964:9: note: in expansion of macro 'DOCTEST_DECLARE_MUTEX'
+         DOCTEST_DECLARE_MUTEX(mutex)
+         ^~~~~~~~~~~~~~~~~~~~~
+../lib/doctest.h: In member function 'virtual void doctest::{anonymous}::ConsoleReporter::test_case_exception(const doctest::TestCaseException&)':
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:6341:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:6341:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:60: error: template argument 1 is invalid
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                            ^
+../lib/doctest.h:6341:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:6341:32: error: 'mutex' was not declared in this scope
+             DOCTEST_LOCK_MUTEX(mutex)
+                                ^
+../lib/doctest.h:3175:100: note: in definition of macro 'DOCTEST_LOCK_MUTEX'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                                    ^~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h:3175:80: warning: unused variable 'DOCTEST_ANON_LOCK_10' [-Wunused-variable]
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                ^
+../lib/doctest.h:419:34: note: in definition of macro 'DOCTEST_CAT_IMPL'
+ #define DOCTEST_CAT_IMPL(s1, s2) s1##s2
+                                  ^~
+../lib/doctest.h:422:30: note: in expansion of macro 'DOCTEST_CAT'
+ #define DOCTEST_ANONYMOUS(x) DOCTEST_CAT(x, __COUNTER__)
+                              ^~~~~~~~~~~
+../lib/doctest.h:3175:62: note: in expansion of macro 'DOCTEST_ANONYMOUS'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                              ^~~~~~~~~~~~~~~~~
+../lib/doctest.h:6341:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h: In member function 'virtual void doctest::{anonymous}::ConsoleReporter::log_assert(const doctest::AssertData&)':
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:6380:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:6380:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:60: error: template argument 1 is invalid
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                            ^
+../lib/doctest.h:6380:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:6380:32: error: 'mutex' was not declared in this scope
+             DOCTEST_LOCK_MUTEX(mutex)
+                                ^
+../lib/doctest.h:3175:100: note: in definition of macro 'DOCTEST_LOCK_MUTEX'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                                    ^~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h:3175:80: warning: unused variable 'DOCTEST_ANON_LOCK_11' [-Wunused-variable]
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                ^
+../lib/doctest.h:419:34: note: in definition of macro 'DOCTEST_CAT_IMPL'
+ #define DOCTEST_CAT_IMPL(s1, s2) s1##s2
+                                  ^~
+../lib/doctest.h:422:30: note: in expansion of macro 'DOCTEST_CAT'
+ #define DOCTEST_ANONYMOUS(x) DOCTEST_CAT(x, __COUNTER__)
+                              ^~~~~~~~~~~
+../lib/doctest.h:3175:62: note: in expansion of macro 'DOCTEST_ANONYMOUS'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                              ^~~~~~~~~~~~~~~~~
+../lib/doctest.h:6380:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h: In member function 'virtual void doctest::{anonymous}::ConsoleReporter::log_message(const doctest::MessageData&)':
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:6396:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:50: error: 'mutex' is not a member of 'std'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                  ^
+../lib/doctest.h:6396:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:3175:60: error: template argument 1 is invalid
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                            ^
+../lib/doctest.h:6396:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+../lib/doctest.h:6396:32: error: 'mutex' was not declared in this scope
+             DOCTEST_LOCK_MUTEX(mutex)
+                                ^
+../lib/doctest.h:3175:100: note: in definition of macro 'DOCTEST_LOCK_MUTEX'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                                    ^~~~
+In file included from test/teste.cpp:2:0:
+../lib/doctest.h:3175:80: warning: unused variable 'DOCTEST_ANON_LOCK_12' [-Wunused-variable]
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                                                ^
+../lib/doctest.h:419:34: note: in definition of macro 'DOCTEST_CAT_IMPL'
+ #define DOCTEST_CAT_IMPL(s1, s2) s1##s2
+                                  ^~
+../lib/doctest.h:422:30: note: in expansion of macro 'DOCTEST_CAT'
+ #define DOCTEST_ANONYMOUS(x) DOCTEST_CAT(x, __COUNTER__)
+                              ^~~~~~~~~~~
+../lib/doctest.h:3175:62: note: in expansion of macro 'DOCTEST_ANONYMOUS'
+ #define DOCTEST_LOCK_MUTEX(name) std::lock_guard<std::mutex> DOCTEST_ANONYMOUS(DOCTEST_ANON_LOCK_)(name);
+                                                              ^~~~~~~~~~~~~~~~~
+../lib/doctest.h:6396:13: note: in expansion of macro 'DOCTEST_LOCK_MUTEX'
+             DOCTEST_LOCK_MUTEX(mutex)
+             ^~~~~~~~~~~~~~~~~~
+makefile:23: recipe for target 'test/teste.o' failed
+mingw32-make[1]: *** [test/teste.o] Error 1
+mingw32-make[1]: Leaving directory 'C:/Users/Vinícius de Freitas/Desktop/Folders_ Pastas/UFRN/EDB 1/Exercícios_1unidade/exercicios-main/provas_praticas/unidade2/2024_2/q2'
