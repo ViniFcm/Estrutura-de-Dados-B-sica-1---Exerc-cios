@@ -1,6 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-#include "Pilha.h"
+#include "header/Pilha.h"
 #include <string>
 
 TEST_CASE("Tamanho inicial da pilha deve ser zero") {

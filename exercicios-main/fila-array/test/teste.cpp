@@ -1,6 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
-#include "Fila.h"
+#include "header/Fila.h"
 #include <string>
 
 TEST_CASE("Fila - Tamanho inicial deve ser zero") {
