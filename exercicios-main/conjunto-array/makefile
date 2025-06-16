@@ -23,7 +23,7 @@ $(TEST_EXECUTABLE): $(TEST_OBJECTS)
 
 .PHONY: run-test
 run-test: $(TEST_EXECUTABLE)
-	./$(TEST_EXECUTABLE)
+	./$(TEST_EXECUTABLE) -s
 
 .PHONY: run
 run: $(EXECUTABLE)

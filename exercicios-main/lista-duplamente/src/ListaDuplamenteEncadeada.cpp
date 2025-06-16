@@ -5,7 +5,7 @@
  * Criado por Eiji Adachi Medeiros Barbosa.
  */
 
-#include "ListaDuplamenteEncadeada.h"
+#include "header/ListaDuplamenteEncadeada.h"
 #include <sstream>
 #include <stdexcept>
 

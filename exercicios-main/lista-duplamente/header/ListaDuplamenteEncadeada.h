@@ -7,7 +7,7 @@
 #ifndef __ListaDuplamenteEncadeada__
 #define __ListaDuplamenteEncadeada__
 
-#include "No.h"
+#include "header/No.h"
 #include <string>
 
 typedef enum {

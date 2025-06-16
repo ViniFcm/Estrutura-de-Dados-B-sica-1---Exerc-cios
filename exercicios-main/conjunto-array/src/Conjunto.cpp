@@ -1,27 +1,61 @@
 #include "Conjunto.h"
 #include <iostream>
+#include <utility>
 
-Conjunto::Conjunto(const int capacidade)
+Conjunto::Conjunto(const int capacidade) 
 {
+    this->capacidade = capacidade;
+    this->quantidade = 0;
+    this->elementos =  new int[this->capacidade];
 }
 
 Conjunto::~Conjunto()
 {
+    delete [] this->elementos;
 }
 
 bool Conjunto::contem(int elemento) const
 {
-    return elemento != 0;
+    
+    for(int i = 0; i < this->quantidade; i++){
+        if(this->elementos[i] == elemento){
+            return true;
+        }
+    } 
+    return false;
 }
 
 bool Conjunto::inserir(int elemento)
 {
-    return elemento != 0;
-}
+    if(this->quantidade == this->capacidade){
+        return false;
+    }
+    for(int i = 0; i < this->quantidade; i++){
+        if(this->elementos[i] == elemento){
+            return false;
+        }
+    } 
+    this->elementos[this->quantidade] = elemento;
+    this->quantidade++;
+    return true;
+}  
 
 bool Conjunto::remover(int elemento)
 {
-    return elemento != 0;
+    if(this->quantidade == 0){
+        return false;
+    }
+    for(int i = 0; i < this->quantidade; i++){
+        if(this->elementos[i] == elemento){
+            auto x = elementos[i];
+            elementos[i] = elementos[this->quantidade-1];
+            elementos[this->quantidade-1] = x;
+            this->quantidade--;
+            return true;
+        }
+    }
+    return false;
+
 }
 
 int Conjunto::tamanho() const

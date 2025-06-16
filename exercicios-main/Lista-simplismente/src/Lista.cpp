@@ -36,7 +36,19 @@ Lista::~Lista()
  */
 bool Lista::inserirInicio(const std::string& elemento)
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+
+    if(this->primeiro == nullptr){
+        No* novo = new No(elemento);
+        this->primeiro = novo;
+        this->ultimo = novo;
+        this->quantidade++;
+        return true;
+    }
+        No* novo = new No(elemento);
+        novo->proximo = this->primeiro;
+        this->primeiro = novo;
+        this->quantidade++;
+        return true;
 }
 
 /**
@@ -47,7 +59,16 @@ bool Lista::inserirInicio(const std::string& elemento)
  */
 bool Lista::inserirFim(const std::string& elemento)
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    if(this->primeiro == nullptr){
+        inserirInicio(elemento);
+        return true;
+    }
+    No* novo = new No(elemento);
+    this->ultimo->proximo = novo;
+    this->ultimo = this->ultimo->proximo;
+    this->quantidade++;
+    return true;
+    
 }
 
 /**
@@ -60,7 +81,28 @@ bool Lista::inserirFim(const std::string& elemento)
  */
 bool Lista::inserirNaPosicao(int i, const std::string& elemento) 
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    if(i > this->quantidade + 1 || i <= 0){
+        throw std::out_of_range("Fora");
+        return false;
+    }
+    if(i == 1){
+        return inserirInicio(elemento);
+    }
+    if(i == this->quantidade+1){
+        return inserirFim(elemento);
+    }
+    auto novo = new No(elemento);
+    auto ant = this->primeiro;
+    int cont = 1;
+    while(cont < i-1){
+        ant = ant->proximo;
+        cont++;
+    }
+    novo->proximo = ant ->proximo;
+    ant->proximo = novo;
+    this->quantidade++;
+    return true;
+
 }
 
 /**
@@ -71,7 +113,23 @@ bool Lista::inserirNaPosicao(int i, const std::string& elemento)
  */
 bool Lista::removerInicio()
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    if(this->primeiro == nullptr){
+        throw std::out_of_range("!!");
+        return false;
+    }
+    else if(this->primeiro->proximo == nullptr){
+        auto x = this->primeiro;
+        this->primeiro = nullptr;
+        this->ultimo = nullptr;
+        this->quantidade--;
+        delete x;
+        return true;
+    }
+    auto aux = this->primeiro;
+    this->primeiro = this->primeiro->proximo;
+    this->quantidade--;
+    delete aux;
+    return true;
 }
 
 /**
@@ -82,7 +140,20 @@ bool Lista::removerInicio()
  */
 bool Lista::removerFim()
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    if(this->primeiro == this->ultimo){
+        return removerInicio();
+    }
+    auto ant = this->primeiro;
+    auto atu = this->primeiro;
+    while(atu->proximo != nullptr){
+        ant = atu;
+        atu = atu->proximo;
+    }
+    ant->proximo = nullptr;
+    this->ultimo = ant;
+    delete atu;
+    this->quantidade--;
+    return true;
 }
 
 /**
@@ -94,7 +165,27 @@ bool Lista::removerFim()
  */
 bool Lista::removerNaPosicao(int i) 
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    if(i > this->quantidade || i < 0){
+        throw std::out_of_range("Fora");
+        return false;
+    }
+    if(i == 1){
+        return removerInicio();
+    }
+    if(i == this->quantidade){
+        return removerFim();
+    }
+    auto ant = this->primeiro;
+    int cont = 1;
+    while(cont < i-1){
+        ant = ant->proximo;
+        cont++;
+    }
+    auto x = ant ->proximo;
+    ant->proximo = ant->proximo->proximo;
+    this->quantidade--;
+    delete x;
+    return true;
 }
 
 /**
@@ -142,7 +233,22 @@ const std::string& Lista::ultimoElemento() const
  */
 const std::string& Lista::elementoNaPosicao(int i) const 
 {
-    throw std::runtime_error("Ainda não foi implementado.");
+    if(i < 1 or i > this->quantidade ){
+         throw std::out_of_range("Posição Inválida");
+    }
+    if(i == 1){
+        return this->primeiro->valor;
+    }
+    if(i == this->quantidade ){
+        return this->ultimo->valor;
+    }
+    auto atual = this->primeiro;
+    int j=1;
+    while(j<i){
+        atual = atual->proximo;
+        j++;
+    }
+    return atual->valor;
 }
 
 /**
